@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--**********Copyright 2016 Roku Corp.  All Rights Reserved. : ANDY YU **********-->
+
+<component name="MainScene" extends="Scene" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://rokudev.roku.com/rokudev/schema/RokuSceneGraph.xsd">
+	<!-- importing main handler -->
+    <script type="text/brightscript" uri="pkg:/components/MainScene/MainScene.brs" />
+    
+    <children>
+    
+    	<Timer
+			id="cube5Timer"
+			repeat="true"
+			duration="2"
+		/>
+		
+		<Animation
+			id="cube5Anim"
+			duration="3"
+			easeFunction="linear" >
+			<FloatFieldInterpolator id = "cube5Interp"
+				key="[0, 2]"
+				keyValue="[0, 0]"
+				fieldToInterp="Cube5.rotation"
+			/>
+		</Animation>
+		
+		<Animation
+			id="cube5Translate"
+			duration="3"
+			easeFunction="linear" >
+			<Vector2DFieldInterpolator id = "cube5Interp2"
+				key="[0, 2]"
+				keyValue="[[0, 0],[0, 0]]"
+				fieldToInterp="Cube5.translation"
+			/>
+		</Animation>
+    
+    	<Cube3D                                                                                                                                          
+    		id="Cube1"
+    		visible="true"
+    		focusable="true"
+    		width = "400"
+    		height = "200"
+    		rotation = "2.94"
+    		rotate_duration = "12"
+    		translation="[1700, 400]" />	
+    		
+    	<Cube3D-2                                                                                                                                          
+    		id="Cube2"
+    		visible="true"
+    		focusable="true"
+    		width = "325"
+    		height = "300"
+    		rotate_duration = "4"
+    		translation="[200, 200]" />	
+    
+    	<Cube3D-3                                                                                                                                          
+    		id="Cube3"
+    		visible="true"
+    		focusable="true"
+    		width = "500"
+    		height = "500"
+    		rotation = "1"
+    		rotate_duration = "4"
+    		translation="[550, 700]" />
+    		
+    	<Cube3D-4                                                                                                                                          
+    		id="Cube4"
+    		visible="true"
+    		focusable="true"
+    		width = "200"
+    		height = "200"
+    		rotation = "1.57"
+    		rotate_duration = "1.5"
+    		translation="[200, 900]" />
+    		
+    	<Cube3D-5                                                                                                                                          
+    		id="Cube5"
+    		visible="true"
+    		focusable="true"
+    		width = "150"
+    		height = "150"
+    		rotation = "0"
+    		rotate_duration = "3"
+    		translation="[-150, -150]" />
+    		
+    </children>
+    
+</component>

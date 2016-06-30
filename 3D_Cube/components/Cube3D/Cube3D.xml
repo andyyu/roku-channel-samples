@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--**********Copyright 2016 Roku Corp.  All Rights Reserved. : ANDY YU **********-->
+<component name="Cube3D" extends="Group" xsi:noNamespaceSchemaLocation="http://rokudev.roku.com/rokudev/schema/RokuSceneGraph.xsd">
+
+	<interface>
+		<field id="rotate_duration" type="string" onChange="setRotateDuration"/>
+  		<field id="width" type="string" onChange="setWidth"/>
+  		<field id="height" type="string" onChange="setHeight"/>
+	</interface>
+	
+	<script type="text/brightscript" uri="pkg:/components/Cube3D/Cube3D.brs" />
+	
+	<children>
+			
+		<Timer
+			id="flipTimer"
+			repeat="true"
+			duration="1.5"
+		/>
+			
+		<Poster
+			id="Top"
+			width="0"
+			height="0"
+			visible="false"
+			translation="[0,0]"
+			uri="pkg:/images/splash_sd_flipped.jpg" />
+			
+		<Poster
+			id="Left"
+			width="0"
+			height="0"
+			visible="false"
+			translation="[0,0]"
+			uri="pkg:/images/splash_sd_flipped.jpg" />
+			
+		<Poster
+			id="Right"
+			width="0"
+			height="0"
+			visible="false"
+			translation="[0,0]"
+			uri="pkg:/images/splash_sd_flipped.jpg" />
+		
+		<Poster
+			id="Bottom"
+			width="0"
+			height="0"
+			visible="false"
+			translation="[0,0]"
+			uri="pkg:/images/splash_sd_flipped.jpg" />
+				
+		<Rectangle
+			id="MidEdge"
+			width="0"
+			height="0"
+			visible="true"
+			translation="[200,0]"
+			color="0x000000" />
+			
+		<Rectangle
+			id="LeftEdge"
+			width="0"
+			height="0"
+			visible="true"
+			translation="[0,0]"
+			color="0x000000" />
+		
+		<Rectangle
+			id="RightEdge"
+			width="0"
+			height="00"
+			visible="true"
+			translation="[200,0]"
+			color="0x000000" />
+	</children>
+
+</component>
