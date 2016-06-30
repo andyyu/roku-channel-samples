@@ -1,0 +1,2 @@
+This code covers a minimal example of using an roVideoPlayer to play an HLS stream with WebVTT subtitles.
+Refer to https://sdkdocs.roku.com/display/sdkdoc/Closed+Caption+Support for more information.
