@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="TestScene" extends="Scene">
+  <children>
+    <Label
+      id="label"
+      height="200"
+      width="720"
+      text="Row List Test"
+      translation="[50, 50]"/>
+    <Label
+      id="label2"
+      height="200"
+      width="720"
+      text="Press Up / Down to set # of items to test"
+      translation="[50, 100]"/>
+    <SimpleRowList id="row_list" translation="[50,150]" />
+  </children>
+  <script type="text/brightscript" uri="pkg:/components/TestScene.brs"/>
+</component>
