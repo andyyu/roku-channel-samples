@@ -1,12 +1,3 @@
-#About
-- This branch includes tests of loop iteration times for creating content meta-data.
-  Data is stored in an Associative Array
-- All tests were done on an Austin running on Roku OS 7.2
+This channel is designed to test the performance of a RowList after loading in a variable amount of unique images.
 
-#Test Results
-- Linear increase in computation time with # of iterations
-- No difference in speed between BrightScript thread, Render thread, and Task thread
-- Only the Render Thread times out. It does so after ~30 seconds on an Austin.
-
-##Future Considerations
-- This test can be run on other Roku devices to test for performance differences
+Notice that the difference between choosing ten images per row and hundreds of images per row shows only delays in load time and no further performance degradation once the content has been loaded.
