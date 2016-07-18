@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+
+<component name="SimpleRowList" extends="RowList" >
+
+<script type="text/brightscript" >
+<![CDATA[
+
+    function init()
+        print "in SimpleRowListPanel init()"
+	    m.top.itemComponentName = "SimpleRowListItem"
+	    m.top.numRows = 2
+	    m.top.itemSize = [1200, 213]
+	    m.top.rowHeights = [213]
+	    m.top.rowItemSize = [ [196, 213], [196, 213], [196, 213] ]
+	    m.top.itemSpacing = [ 0, 80 ]
+	    m.top.rowItemSpacing = [ [20, 0] ]
+		m.top.rowLabelOffset = [ [0, 30] ]
+	    m.top.rowFocusAnimationStyle = "floatingFocus"
+		m.top.showRowLabel = [true, true]
+		m.top.rowLabelColor="0xa0b033ff"
+	    m.top.visible = true
+	    m.top.SetFocus(true)
+	    m.top.ObserveField("rowItemFocused", "onRowItemFocused")
+    end function
+
+    function onRowItemFocused() as void
+        row = m.top.rowItemFocused[0]
+        col = m.top.rowItemFocused[1]
+    end function
+]]>
+</script>
+</component>
